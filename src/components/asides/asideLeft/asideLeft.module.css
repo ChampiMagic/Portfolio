@@ -1,0 +1,45 @@
+.asideLeft {
+    width: 10%;
+    min-height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    gap: 2.4em;
+}
+
+.iconsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.first{
+    width: 100%;
+    font-size: 45px;
+    color: #fffdff;
+}
+.second{
+    width: 100%;
+    font-size: 45px;
+    color: #ac9ddb;
+}
+.third{
+    width: 100%;
+    font-size: 45px;
+    color: #8990dd;
+}
+.fourt{
+    width: 100%;
+    font-size: 45px;
+    color: #6e83cf;
+}
+
+.decoration {
+    border-left: 2px solid #83bde4;
+    height: 150px;
+}

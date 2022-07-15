@@ -1,0 +1,52 @@
+.asideRight {
+    width: 10%;
+    min-height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    gap: 2.4em;
+}
+
+.iconsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.iconsContainer > p {
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+.K {
+    color: #df9c6b;
+}
+
+.A {
+    color: #9f5244;
+}
+
+.I {
+    color: #6a3b36;
+}
+
+.Z {
+    color: #84402c;
+}
+
+.E {
+    color: #4f1f03;
+}
+
+.N {
+    color: #310600;
+}
+.decoration {
+    border-left: 2px solid #230303;
+    height: 150px;
+}
