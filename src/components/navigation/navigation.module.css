@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -5,15 +7,21 @@
     gap: 2em;
     width: 100%;
     height: 10em;
-    background-color: #ffffff01;
+    background-color: #0a090b55;
     padding: 2em;
     position: fixed;
     top: 0;
     left: 0;
+    transition: transform 550ms;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
 }
 
-.navOptions {
-    color: #fff;
+.navHidden {
+    transform: translateY(-10em);
+}
+
+.navOptions:first-child {
     display: flex;
     list-style-type: decimal-leading-zero;
     gap: 3em;
@@ -21,9 +29,25 @@
     font-weight: bolder;
 }
 
+.option_1 {
+    color: #6e83cf;
+}
+
+.option_2 {
+    color: #6e83cf;
+}
+
+.option_3 {
+    color: #8990dd;
+}
+
+.option_4 {
+    color: #ac9ddb;
+}
+
 .icon {
     font-size: 7em;
-    color: #385866;
+    color: #83bde4;
 }
 
 .left {
@@ -54,5 +78,6 @@
     text-decoration: none;
     font-weight: bolder;
 }
+
 
 

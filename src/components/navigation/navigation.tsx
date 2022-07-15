@@ -1,21 +1,32 @@
 import style from './navigation.module.css'
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { FaConnectdevelop } from 'react-icons/fa'
-import { useRef, useLayoutEffect } from 'react';
+import { useRef, useState} from 'react';
 
 export default function Navigation(): JSX.Element {
 
-    const h1Ref = useRef<HTMLHeadingElement>(null);
+    const [isDown, setIsDown] = useState<boolean>(false)
+
+    const nav = useRef<HTMLHeadingElement>(null);
+
+    let lastScrollY = window.scrollY;
+    
 
     
-    console.log(h1Ref) // { current: null }
+       window.addEventListener("scroll", () => {
+            if(lastScrollY <= window.scrollY && lastScrollY !== 0) {
+                setIsDown(true)
+            } else {
+                setIsDown(false)
+            }
+           
+            lastScrollY = window.scrollY;
+       });
 
-    useLayoutEffect(() => {
-        console.log(h1Ref); // { current: <h1_object> }
-    })
 
     return (
-        <nav ref={h1Ref} className={style.nav}>
+        <nav ref={nav} className={`${style.nav} ${isDown ? style.navHidden : null}`}>
 
             <div className={style.left}>
               <FaConnectdevelop className={style.icon}/>
@@ -23,10 +34,10 @@ export default function Navigation(): JSX.Element {
 
             <div className={style.right}>
                 <ol className={style.navOptions}>
-                    <li>About</li>
-                    <li>Experience</li>
-                    <li>Work</li>
-                    <li>Contact</li>
+                    <li className={style.option_1}><Link to="about" spy={true} smooth={true} duration={500} >About</Link></li>
+                    <li className={style.option_2}><Link to="work" spy={true} smooth={true} duration={500} >Work</Link></li>
+                    <li className={style.option_3}><Link to="experience" spy={true} smooth={true} duration={500} >Experience</Link></li>
+                    <li className={style.option_4}><Link to="contact" spy={true} smooth={true} duration={500} >Contact</Link></li>
                 </ol>
                 <div className={style.buttonContainer}>
                     <NavLink to="/resume">Resume</NavLink>
