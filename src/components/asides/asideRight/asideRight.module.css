@@ -1,5 +1,5 @@
 .asideRight {
-    width: 10%;
+    width: 12.5%;
     min-height: 20em;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
 }
 
 .iconsContainer > p {
-    font-size: 45px;
+    font-size: 35px;
     font-weight: lighter;
 }
 
@@ -48,5 +48,5 @@
 }
 .decoration {
     border-left: 2px solid #230303;
-    height: 150px;
+    height: 6em;
 }

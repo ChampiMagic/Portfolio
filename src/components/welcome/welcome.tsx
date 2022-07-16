@@ -1,6 +1,6 @@
-import style from "./presentation.module.css";
+import style from "./welcome.module.css";
 
-export default function Presentation(): JSX.Element {
+export default function Welcome(): JSX.Element {
 
     return (
         <div className={style.animeContainer}>

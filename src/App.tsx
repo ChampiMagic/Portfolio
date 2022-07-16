@@ -1,22 +1,60 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import style from './App.module.css'
-import Presentation from './components/presentation/presentation'
 import Navigation from './components/navigation/navigation'
 import Article from './components/article/article'
 import AsideLeft from './components/asides/asideLeft/asideLeft'
 import AsideRight from './components/asides/asideRight/asideRight'
 
+import StaticBackgroundParticles from './components/particles/StaticParticles'
+import AnimatedBackgroundParticles from './components/particles/AnimatedParticle'
+
+
+declare global {
+  interface WindowEventMap {
+    keydown: React.KeyboardEvent<HTMLInputElement>
+  }
+}
 
 
 export default function App(): JSX.Element {
- 
+
+  const [ lightMode, setLightMode ] = useState<boolean>(false)
+  
+
+  const handleUserKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const { key } = event
+      if (key === "Enter") {
+        if(lightMode){
+          setLightMode(false)
+          document.documentElement.style.setProperty('--onScreen', 'none');
+        } else {
+          setLightMode(true)
+          document.documentElement.style.setProperty('--onScreen', 'initial');
+        }        
+      }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleUserKeyPress)
+
+    return () => {
+      window.removeEventListener('keydown', handleUserKeyPress)
+    }
+  })
 
   return (
    <div className={style.body}>
-    <Navigation />
-    <AsideLeft />
-    <Article />
-    <AsideRight />
+      
+      { lightMode? 
+      <StaticBackgroundParticles />
+      :
+      <AnimatedBackgroundParticles />
+      }
+      
+      <Navigation />
+      <AsideLeft />
+      <Article />
+      <AsideRight />
    </div>
    
   )
