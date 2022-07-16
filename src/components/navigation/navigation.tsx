@@ -35,8 +35,8 @@ export default function Navigation(): JSX.Element {
             <div className={style.right}>
                 <ol className={style.navOptions}>
                     <li className={style.option_1}><Link to="about" spy={true} smooth={true} duration={500} >About</Link></li>
-                    <li className={style.option_2}><Link to="work" spy={true} smooth={true} duration={500} >Work</Link></li>
-                    <li className={style.option_3}><Link to="experience" spy={true} smooth={true} duration={500} >Experience</Link></li>
+                    <li className={style.option_2}><Link to="experience" spy={true} smooth={true} duration={500} >Experience</Link></li>
+                    <li className={style.option_3}><Link to="projects" spy={true} smooth={true} duration={500} >Projects</Link></li>
                     <li className={style.option_4}><Link to="contact" spy={true} smooth={true} duration={500} >Contact</Link></li>
                 </ol>
                 <div className={style.buttonContainer}>

@@ -2,6 +2,7 @@ import style from './article.module.css'
 
 import Presentation from './presentation/presentation'
 import About from './about/about'
+import Experience from './experience/experience'
 
 
 export default function Article(): JSX.Element {
@@ -10,9 +11,7 @@ export default function Article(): JSX.Element {
           
             <Presentation />
             <About />
-            <section id="work" className={style.work}></section>
-            <section id="experience" className={style.experience}></section>
-            <section id="contact" className={style.constact}></section>
+            <Experience />
         </div>
        
     )
