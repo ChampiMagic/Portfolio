@@ -3,6 +3,7 @@ import style from './article.module.css'
 import Presentation from './presentation/presentation'
 import About from './about/about'
 import Experience from './experience/experience'
+import Projects from './projects/projects'
 
 
 export default function Article(): JSX.Element {
@@ -12,6 +13,7 @@ export default function Article(): JSX.Element {
             <Presentation />
             <About />
             <Experience />
+            <Projects />
         </div>
        
     )

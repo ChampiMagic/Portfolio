@@ -1,29 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto+Slab&family=Roboto:wght@100&display=swap');
 
 .article {
-    min-width: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 5em;
     width: 75%;
-}
-
-.work {
-    width: 100%;
-    height: 100vh;
-    border: 3px solid rgb(43, 27, 226);
-}
-
-.experience {
-    width: 100%;
-    height: 100vh;
-    border: 3px solid rgb(226, 229, 37);
-}
-
-.contact {
-    width: 100%;
-    height: 100vh;
-    border: 3px solid rgb(205, 63, 63);
+    height: 100%;
 }
 
 

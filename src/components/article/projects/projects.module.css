@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+
+/* variables */
+:root {
+	/* Color */
+	--main-color: #000000;
+	--secondary-color: rgb(175, 165, 165);
+
+
+	/* Font-size */
+	--font-size-main-title: 15rem;
+	--font-size-secondary-title: 1.25rem;
+	--font-size-section-title: 1.5rem;
+	--font-size-project-title: 2em;
+	--font-size-text: .6rem;
+	--font-size-btn: 40rem;
+} 
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+    padding: 3em;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.number_heading {
+    font-size: 50px;
+    color: var(--white);
+}
+
+.number_heading::before {
+    font-size: 35px;
+    content: "03.";
+    margin-right: .5em;
+    position: relative;
+    top: -5px;
+}
+
+.decoration_line {
+    height: 1px;
+    width: 28em;
+    margin-left: 1em;
+    background-color: var(--white);
+}
+
+.projects_container {
+    padding-top:  4em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+
+.projects_card_1 {
+	position: relative;
+	width: 90%;
+	height: 30em;
+	box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.505);
+	padding: .5em;
+	background-image: url(codeLearn.png);
+	background-position: center center;
+	background-size: cover;
+	transition: 1s;
+	overflow-y: hidden;
+}
+
+.projects_card_2 {
+	position: relative;
+	width: 90%;
+	height: 30em;
+	box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.505);
+	padding: .5em;
+	background-image: url(Picountries.png);
+	background-position: center center;
+	background-size: cover;
+	transition: 1s;
+	overflow-y: hidden;
+}
+
+.projects_card_3 {
+	position: relative;
+	width: 90%;
+	height: 35em;
+	box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.505);
+	padding: .5em;
+	background-image: url(2fast2furious.png);
+	background-position: center center;
+	background-size: cover;
+	transition: 1s;
+	overflow-y: hidden;
+}
+
+.project_info_container {
+	position: absolute;
+	top: 80%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: .5s;
+	padding: 0 .5em .5em .5em;
+	overflow: hidden;
+    font-family: 'Inconsolata', monospace;
+}
+
+.project_title {
+	font-size: 2em;
+	color: var(--main-color);
+	font-weight: lighter;
+	text-transform: uppercase;
+	margin: .5em 0 .15em 0;
+	transition: .3s;
+    
+}
+
+.project_load_bar {
+	width: 0;
+	height: 1.5px;
+	background: var(--main-color);
+	margin: 0;
+}
+
+.projects_card:hover {
+	transform: scale(1.05);
+    cursor: pointer;
+}
+
+.projects_card:hover .project_info_container {
+	top: 48%;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: .5em;
+	background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.584) 20%,hsl(0 0% 0% / 1));
+    cursor: pointer;
+}
+
+.project_short_desc_1, .project_btn{
+	font-size: 1.3em;
+	color: rgb(255, 255, 255);
+    margin: .5em 0 0 0;
+	display: none;
+	opacity: 0;
+	font-weight: lighter;
+}
+
+.project_short_desc_2, .project_btn{
+	font-size: 1.3em;
+	color: rgb(255, 255, 255);
+    margin: .5em 0 0 0;
+	display: none;
+	opacity: 0;
+	font-weight: lighter;
+}
+
+.project_short_desc_3,.project_btn{
+	font-size: 1.3em;
+	color: rgb(255, 255, 255);
+    margin: .5em 0 0 0;
+	display: none;
+	opacity: 0;
+	font-weight: lighter;
+}
+
+.project_btn {
+	max-width: 10em;
+	padding: .35em 0;
+	margin: .75em 0;
+	display: none;
+	justify-content: center;
+	border: none;
+	border-radius: 15px;
+	background: var(--main-color);
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.project_btn a{
+	color: #fff;
+	font-weight: 400;
+	justify-self: center;
+	text-decoration: none;
+    cursor: pointer;
+}
+
+.project_btn:hover {
+	transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.projects_card:hover .project_title {
+	color: #fff;
+}
+
+.projects_card:hover .project_load_bar {
+	display: flex;
+	transition: opacity 1s ease;
+	animation: project-load-animation 2s ease .1s forwards;
+}
+
+.projects_card:hover .project_short_desc_1  {
+	display: flex;
+	transition: opacity 1s ease;
+	animation: project-infos-animation 1s ease .8s forwards;
+}
+.projects_card:hover .project_short_desc_2  {
+	display: flex;
+	transition: opacity 1s ease;
+	animation: project-infos-animation 1s ease .8s forwards;
+}
+
+.projects_card:hover .project_short_desc_3  {
+	display: flex;
+	transition: opacity 1s ease;
+	animation: project-infos-animation 1s ease .8s forwards;
+}
+
+
+.projects_card:hover .project_btn{
+	display: flex;
+	transition: opacity 1s ease;
+	animation: project-infos-animation 1s ease .8s forwards;
+}
+
+
+@keyframes project-load-animation {
+  0% {width: 0;}
+	15% {width: 0vw;}
+  25% {width: 0vw;}
+	50% {width: 35vw;}
+	65% {width: 50vw;}
+	75% {width: 75vw;}
+	100% {width: 100vw;}
+}
+
+
+@keyframes project-infos-animation {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
