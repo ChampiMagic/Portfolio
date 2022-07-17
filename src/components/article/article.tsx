@@ -4,6 +4,7 @@ import Presentation from './presentation/presentation'
 import About from './about/about'
 import Experience from './experience/experience'
 import Projects from './projects/projects'
+import Contact from './contact/contact'
 
 
 export default function Article(): JSX.Element {
@@ -14,6 +15,7 @@ export default function Article(): JSX.Element {
             <About />
             <Experience />
             <Projects />
+            <Contact />
         </div>
        
     )
