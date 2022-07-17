@@ -40,7 +40,7 @@ export default function Navigation(): JSX.Element {
                     <li className={style.option_4}><Link to="contact" spy={true} smooth={true} duration={500} >Contact</Link></li>
                 </ol>
                 <div className={style.buttonContainer}>
-                    <NavLink to="/resume">Resume</NavLink>
+                    <a href="/resume.pdf">Resume</a>
                 </div>
             </div>
         
