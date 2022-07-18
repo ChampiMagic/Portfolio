@@ -2,7 +2,7 @@ import style from './navigation.module.css'
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import { FaConnectdevelop } from 'react-icons/fa'
-import { useRef, useState} from 'react';
+import { useRef, useState, useEffect} from 'react';
 
 export default function Navigation(): JSX.Element {
 
@@ -24,6 +24,31 @@ export default function Navigation(): JSX.Element {
             lastScrollY = window.scrollY;
        });
 
+       
+
+       const [ lightMode, setLightMode ] = useState<boolean>(false)
+  
+
+  const handleUserKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const { key } = event
+      if (key === "Enter") {
+        if(lightMode){
+          setLightMode(false)
+        } else {
+          setLightMode(true)
+        }        
+      }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleUserKeyPress)
+
+    return () => {
+      window.removeEventListener('keydown', handleUserKeyPress)
+    }
+  })
+
+  console.log(lightMode)
 
     return (
         <nav ref={nav} className={`${style.nav} ${isDown ? style.navHidden : null}`}>
@@ -31,6 +56,7 @@ export default function Navigation(): JSX.Element {
             <div className={style.left}>
               <FaConnectdevelop className={style.icon}/>
             </div>
+            <h2 className={style.lightMode}>For {lightMode? "original" : "lite"} mode press "ENTER"</h2>
 
             <div className={style.right}>
                 <ol className={style.navOptions}>
