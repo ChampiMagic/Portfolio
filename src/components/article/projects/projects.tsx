@@ -42,7 +42,7 @@ export default function Projects(): JSX.Element {
                             <h3 className={style.project_title}>2Fast2Furious</h3>  
                             <span className={style.project_load_bar}></span>
                             <p className={style.project_short_desc_3}>A desktop video game. Built with C# and Unity</p> 
-                            <button className={style.project_btn}> <a href="#">Go to repository</a> </button>
+                            <button className={style.project_btn}> <a href="https://github.com/ChampiMagic/2Fast2Furious">Go to repository</a> </button>
                         </div>
                 </div>
             </div>
