@@ -8,6 +8,7 @@
 
 :root {
   --onScreen: none;
+  --onScreenPress: none;
   --white: #fffdff;
 }
 

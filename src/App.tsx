@@ -27,9 +27,11 @@ export default function App(): JSX.Element {
         if(lightMode){
           setLightMode(false)
           document.documentElement.style.setProperty('--onScreen', 'none');
+          document.documentElement.style.setProperty('--onScreenPress', 'none');
         } else {
           setLightMode(true)
           document.documentElement.style.setProperty('--onScreen', 'initial');
+          document.documentElement.style.setProperty('--onScreenPress', 'pointer');
         }        
       }
   }

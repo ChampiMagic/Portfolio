@@ -22,24 +22,62 @@
     width: 100%;
     font-size: 35px;
     color: #fffdff;
+    transition: 250ms;
+    cursor: var(--onScreenPress);
 }
 .second{
     width: 100%;
     font-size: 35px;
     color: #ac9ddb;
+    transition: 250ms;
+    cursor: var(--onScreenPress);
 }
 .third{
     width: 100%;
     font-size: 35px;
     color: #8990dd;
+    transition: 250ms;
+    cursor: var(--onScreenPress);
 }
 .fourt{
     width: 100%;
     font-size: 35px;
     color: #6e83cf;
+    transition: 250ms;
+    cursor: var(--onScreenPress);
 }
 
 .decoration {
     border-left: 2px solid #83bde4;
     height: 6em;
+}
+
+
+.iconsContainer > a:hover .first {
+    color: var(--white);
+    font-size: 45px;
+}
+
+
+.iconsContainer > a:hover .second {
+    color: var(--white);
+    font-size: 45px;
+}
+
+
+.iconsContainer > a:hover .third {
+    color: var(--white);
+    font-size: 45px;
+}
+
+
+.iconsContainer > a:hover .fourt {
+    color: var(--white);
+    font-size: 45px;
+}
+
+
+.iconsContainer > a:hover .first {
+    color: var(--white);
+    font-size: 45px;
 }

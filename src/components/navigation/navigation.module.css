@@ -32,23 +32,60 @@
 
 .option_1 {
     color: #6e83cf;
+    transition: 250ms;
+    cursor: var(--onScreenPress);
+}
+
+.option_1:hover {
+    font-size: 1.1em;
+    color: var(--white);
 }
 
 .option_2 {
     color: #6e83cf;
+    transition: 250ms;
+    cursor: var(--onScreenPress);
 }
+
+.option_2:hover {
+    font-size: 1.1em;
+    color: var(--white);
+}
+
 
 .option_3 {
     color: #8990dd;
+    transition: 250ms;
+    cursor: var(--onScreenPress);
+}
+
+.option_3:hover {
+    font-size: 1.1em;
+    color: var(--white);
 }
 
 .option_4 {
     color: #ac9ddb;
+    transition: 250ms;
+    cursor: var(--onScreenPress);
+}
+
+.option_4:hover {
+    font-size: 1.1em;
+    color: var(--white);
 }
 
 .icon {
     font-size: 6em;
     color: #83bde4;
+    cursor: var(--onScreenPress);
+    transition: 1s;
+}
+
+.left:hover .icon {
+    font-size: 6.2em;
+    color: #cf1020;
+    transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(180deg) rotateY(180deg) rotateZ(180deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
 }
 
 .left {
@@ -64,9 +101,11 @@
 
 .buttonContainer {
     font-size: 1.2em;
+    font-weight: bolder;
     padding: .6em .7em;
     border: 1px solid #94362f;
     border-radius: 10px;
+    cursor: var(--onScreenPress);
 }
 
 .buttonContainer:hover {

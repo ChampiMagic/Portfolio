@@ -25,28 +25,188 @@
 
 .K {
     color: #df9c6b;
+    animation-name: glow_1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .A {
     color: #9f5244;
+    animation-name: glow_2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .I {
     color: #6a3b36;
+    animation-name: glow_3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .Z {
     color: #84402c;
+    animation-name: glow_4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .E {
     color: #4f1f03;
+    animation-name: glow_5;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .N {
     color: #310600;
+    animation-name: glow_6;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 .decoration {
     border-left: 2px solid #230303;
     height: 6em;
+    animation-name: glow_7;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes glow_1 {
+    0% {
+        color: #ffcaa3;
+    }
+    14.28% {
+        color: #ffcaa3;
+    }
+    100% {}   
+}
+
+@keyframes glow_2 {
+    0% {
+        color: #9f5244;
+    }
+    14.28% {
+        color: #ff846e;
+    }
+    28.57% {
+        color: #ff846e;
+    }
+    100% {}   
+}
+
+@keyframes glow_3 {
+    0% {
+        color: #6a3b36;
+    }
+    14.28% {
+        color: #6a3b36;
+    }
+    28.57% {
+        color: #ff8f82;
+    }
+    42.85% {
+        color: #ff8f82;
+    }
+    100% {}   
+}
+
+@keyframes glow_4 {
+    0% {
+        color: #84402c;
+    }
+    14.28% {
+        color: #84402c;
+    }
+    28.57% {
+        color: #84402c;
+    }
+    42.85% {
+        color: #d16747;
+    }
+    57.14% {
+        color: #d16747;
+    }
+    100% {}   
+}
+
+@keyframes glow_5 {
+    0% {
+        color: #4f1f03;
+    }
+    14.28% {
+        color: #4f1f03;
+    }
+    28.57% {
+        color: #4f1f03;
+    }
+    42.85% {
+        color: #4f1f03;
+    }
+    57.14% {
+        color: #c74f0a;
+    }
+    71.42% {
+        color: #c74f0a;
+    }
+    100% {}   
+}
+
+@keyframes glow_6 {
+    0% {
+        color: #310600;
+    }
+    14.28% {
+        color: #310600;
+    }
+    28.57% {
+        color: #310600;
+    }
+    42.85% {
+        color: #310600;
+    }
+    57.14% {
+        color: #310600;
+    }
+    71.42% {
+        color: #ca1800;
+    }
+    85.71% {
+        color: #ca1800;
+    }
+    100% {}   
+}
+
+@keyframes glow_7 {
+    0% {
+        border-left: 2px solid #230303;
+    }
+    14.28% {
+        border-left: 2px solid #230303;
+    }
+    28.57% {
+        border-left: 2px solid #230303;
+    }
+    42.85% {
+        border-left: 2px solid #230303;
+    }
+    57.14% {
+        border-left: 2px solid #230303;
+    }
+    71.42% {
+        border-left: 2px solid #230303;
+    }
+    85.71% {
+        border-left: 2px solid #b51212;
+    }
+    100% {
+        border-left: 2px solid #b51212;
+    }   
 }
