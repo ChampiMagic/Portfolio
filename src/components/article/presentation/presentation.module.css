@@ -24,7 +24,7 @@
 
 .textContainer > h1 {
   width: 100%;
-  font-size: 60px;
+  font-size: clamp(2em, 4.3vw, 6em); 
   color: #fff;
   font-weight: bolder;
   margin: 0;
@@ -33,13 +33,14 @@
 
 .textContainer > h2 {
   width: 100%;
-  font-size: 60px;
+  font-size: clamp(1.5em, 4vw, 5.5em); 
   color: #fff;
   font-weight: bolder;
   font-family: 'Roboto Slab', serif;
 }
 
 .textContainer > p {
+  font-size: clamp(.5em, 1.3vw, 1.5rem); 
   margin-top: 2em;
   width: 60%;
   color: #fff;
@@ -57,7 +58,7 @@
   height: 160px;
   overflow: hidden;
   font-family: 'Inconsolata', monospace;
-  font-size: 35px;
+  font-size: clamp(1.1em, 2.5vw, 2.5em); 
   line-height: 40px;
   color: #ecf0f1;
 }
@@ -80,7 +81,7 @@
   position: absolute;
   top: 0;
   color: #16a085;
-  font-size: 42px;
+  font-size: clamp(.8em, 3vw, 1.12em); 
   line-height: 40px;
   -webkit-animation-name: opacity;
   -webkit-animation-duration: 2s;

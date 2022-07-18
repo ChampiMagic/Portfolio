@@ -7,24 +7,26 @@
 .header {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .number_heading {
-    font-size: 50px;
-    color: var(--white)
+	display: flex;
+	font-size: clamp(1rem, 3.6vw, 4rem); 
+    color: var(--white);
 }
 
 .number_heading::before {
-    font-size: 35px;
-    content: "01.";
+    content: "02.";
     margin-right: .5em;
     position: relative;
     top: -5px;
 }
 
 .decoration_line {
+	display: flex;
     height: 1px;
-    width: 43em;
+    width: 62.2%;
     margin-left: 1em;
     background-color: var(--white);
 }
@@ -36,8 +38,9 @@
 }
 
 .img_container {
-    width: 20em;
-    height: 24em;
+    display: flex;
+    width: 32%;
+    height: 32%;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -49,7 +52,7 @@
 
 .description {
     width: 50%;
-    font-size: 20px;
+    font-size: clamp(.5em, 1.3vw, 1.5rem); 
     color: var(--white);
     display: flex;
     flex-wrap: wrap;

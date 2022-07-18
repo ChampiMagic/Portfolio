@@ -7,15 +7,16 @@
 .header {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .number_heading {
-    font-size: 50px;
-    color: var(--white)
+	display: flex;
+	font-size: clamp(1rem, 3.6vw, 4rem); 
+    color: var(--white);
 }
 
 .number_heading::before {
-    font-size: 35px;
     content: "02.";
     margin-right: .5em;
     position: relative;
@@ -23,8 +24,9 @@
 }
 
 .decoration_line {
+	display: flex;
     height: 1px;
-    width: 33em;
+    width: 45%;
     margin-left: 1em;
     background-color: var(--white);
 }
@@ -40,7 +42,7 @@
 
 .not_found {
     color: var(--white);
-    font-size: 80px;
+    font-size: clamp(3rem, 6vw, 6rem); 
     font-family: 'Inconsolata', monospace;
 }
 

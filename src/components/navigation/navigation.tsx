@@ -48,8 +48,6 @@ export default function Navigation(): JSX.Element {
     }
   })
 
-  console.log(lightMode)
-
     return (
         <nav ref={nav} className={`${style.nav} ${isDown ? style.navHidden : null}`}>
 

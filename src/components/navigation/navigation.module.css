@@ -26,7 +26,7 @@
     display: flex;
     list-style-type: decimal-leading-zero;
     gap: 3em;
-    font-size: 1.2em;
+    font-size: clamp(.9em, 1.5vw, 1.5em); 
     font-weight: bolder;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .option_1:hover {
-    font-size: 1.1em;
+    font-size: clamp(.9em, 1.5vw, 1.5em); 
     color: var(--white);
 }
 
@@ -48,7 +48,7 @@
 }
 
 .option_2:hover {
-    font-size: 1.1em;
+    font-size: clamp(.9em, 1.5vw, 1.5em); 
     color: var(--white);
 }
 
@@ -60,7 +60,7 @@
 }
 
 .option_3:hover {
-    font-size: 1.1em;
+    font-size: clamp(.9em, 1.5vw, 1.5em); 
     color: var(--white);
 }
 
@@ -71,12 +71,12 @@
 }
 
 .option_4:hover {
-    font-size: 1.1em;
+    font-size: clamp(.9em, 1.5vw, 1.5em); 
     color: var(--white);
 }
 
 .icon {
-    font-size: 6em;
+    font-size: clamp(3em, 7vw, 6em); 
     color: #83bde4;
     cursor: var(--onScreenPress);
     transition: 1s;
@@ -100,12 +100,13 @@
 }
 
 .buttonContainer {
-    font-size: 1.2em;
+    font-size: clamp(.9em, 1.5vw, 1.5em);
     font-weight: bolder;
     padding: .6em .7em;
     border: 1px solid #94362f;
     border-radius: 10px;
     cursor: var(--onScreenPress);
+
 }
 
 .buttonContainer:hover {
@@ -122,6 +123,7 @@
 .lightMode {
     color: var(--white);
     font-family: 'Inconsolata', monospace;
+    font-size: clamp(.9em, 1.5vw, 1.5em);
 }
 
 

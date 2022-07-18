@@ -7,15 +7,16 @@
 .header {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .number_heading {
-    font-size: 50px;
-    color: var(--white)
+	display: flex;
+	font-size: clamp(1rem, 3.2vw, 4rem); 
+    color: var(--white);
 }
 
 .number_heading::before {
-    font-size: 35px;
     content: "04.";
     margin-right: .5em;
     position: relative;
@@ -23,8 +24,9 @@
 }
 
 .decoration_line {
+	display: flex;
     height: 1px;
-    width: 19em;
+    width: 31%;
     margin-left: 1em;
     background-color: var(--white);
 }
@@ -40,7 +42,7 @@
 
 .title {
     color: var(--white);
-    font-size: 80px;
+    font-size: clamp(3rem, 6.5vw, 8rem); 
     font-family: 'Inconsolata', monospace;
     width: 100%;
     text-align: center;
@@ -52,7 +54,7 @@
     border: 1px solid var(--white);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;
-    font-size: 2em;
+    font-size: clamp(1em, 2.5vw, 3rem); 
     line-height: 1;
     text-decoration: none;
     margin-top: 50px;
