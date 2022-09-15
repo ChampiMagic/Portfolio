@@ -20,7 +20,6 @@ export default function App(): JSX.Element {
 
   const [ lightMode, setLightMode ] = useState<boolean>(false)
   
-
   const handleUserKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const { key } = event
       if (key === "Enter") {
@@ -37,11 +36,14 @@ export default function App(): JSX.Element {
   }
 
   useEffect(() => {
-    window.addEventListener('keydown', handleUserKeyPress)
+    if(window.innerWidth > 600) {
+      window.addEventListener('keydown', handleUserKeyPress)
 
-    return () => {
-      window.removeEventListener('keydown', handleUserKeyPress)
-    }
+      return () => {
+        window.removeEventListener('keydown', handleUserKeyPress)
+      }
+    } else { setLightMode(true) }
+   
   })
 
   return (
