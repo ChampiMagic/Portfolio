@@ -2,6 +2,7 @@ import style from './mobileArticle.module.css'
 
 import MobilePresentation from './mobilePresentation/mobilePresentation'
 import MobileAbout from './mobileAbout/mobileAbout'
+import MobileExperience from './mobileExperience/mobileExperience'
 
 
 export default function MobileArticle(): JSX.Element {
@@ -10,10 +11,7 @@ export default function MobileArticle(): JSX.Element {
           
             <MobilePresentation />
             <MobileAbout />
-            <MobileAbout />
-            <MobileAbout />
-            <MobileAbout />
-            <MobileAbout />
+            <MobileExperience />
         </div>
        
     )
