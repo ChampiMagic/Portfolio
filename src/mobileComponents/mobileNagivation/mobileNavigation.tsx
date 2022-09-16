@@ -4,7 +4,9 @@ import { FaConnectdevelop, FaPhoenixFramework, FaCommentDots } from 'react-icons
 import { MdWork } from 'react-icons/md'
 import { AiFillExclamationCircle } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
-import { useRef, useState, useEffect} from 'react';
+import { IoShareSocial } from 'react-icons/io5'
+
+import { useRef } from 'react';
 
 export default function MobileNavigation(): JSX.Element {
 
@@ -61,6 +63,11 @@ export default function MobileNavigation(): JSX.Element {
                         <Link to="contact" spy={true} smooth={true} duration={500} offset={-80}>
                           <FaCommentDots className={style.optionIcon}/>
                           Contact
+                        </Link>
+
+                        <Link to="footer" spy={true} smooth={true} duration={600}>
+                          <IoShareSocial className={style.optionIcon}/>
+                          Social Media
                         </Link>
                 </div>
 
