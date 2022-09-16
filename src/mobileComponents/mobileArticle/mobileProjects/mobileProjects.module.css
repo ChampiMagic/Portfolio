@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+
+/* variables */
+:root {
+	/* Color */
+	--main-color: #000000;
+	--secondary-color: rgb(175, 165, 165);
+
+
+	/* Font-size */
+	--font-size-main-title: 15rem;
+	--font-size-secondary-title: 1.25rem;
+	--font-size-section-title: 1.5rem;
+	--font-size-project-title: 2em;
+	--font-size-text: .6rem;
+	--font-size-btn: 40rem;
+} 
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+    padding: 1em;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+	width: 100%;
+}
+
+.number_heading {
+	display: flex;
+	font-size: clamp(1.5rem, 4.1vw, 5rem); 
+    color: var(--white);
+}
+
+.number_heading::before {
+    content: "03.";
+    margin-right: .5em;
+    position: relative;
+}
+
+.decoration_line {
+	display: flex;
+    height: 1px;
+    width: 22%;
+    margin-left: 1em;
+    background-color: var(--white);
+}
+
+.projects_container {
+    padding-top:  4em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+
+.project {
+	border: solid 2px #fff;
+	box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.505);
+	background-color: rgba(255, 255, 255, 0.689);
+	color: rgb(0, 0, 0);
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: .5em
+}
+
+.project > h2 {
+	font-size: clamp(2rem, 4.1vw, 5rem); 
+	text-align: center;
+}
+
+.project > p {
+	font-size: clamp(1.2rem, 4.1vw, 5rem); 
+	text-align: center;
+}
+
+.github {
+	text-decoration: none;
+	color: #000;
+	font-size: 3em;
+	margin-right: 1em;
+}
+
+.deploy {
+	text-decoration: none;
+	color: #000;
+	font-size: 3em;
+}
