@@ -11,4 +11,5 @@
 
 .mobile {
   background-image: url("/mobileBackground.webp");
+  flex-direction: column;
 }
