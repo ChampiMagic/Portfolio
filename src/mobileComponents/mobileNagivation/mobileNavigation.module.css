@@ -6,20 +6,15 @@
     align-items: center;
     gap: 5em;
     width: 100%;
-    height: 7em;
-    background-color: #00000038;
+    height: 5em;
     position: fixed;
     top: 0;
     left: 0;
     transition: transform 550ms;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
-    padding-left: 2em;
+    padding: 1em 0em 0em .5em;
     z-index: 10;
-}
-
-.navHidden {
-    transform: translateY(-10em);
 }
 
 .left {
@@ -29,7 +24,7 @@
 }
 
 .icon {
-    font-size: clamp(3em, 7vw, 6em); 
+    font-size: clamp(5em, 8vw, 7em); 
     color: #83bde4;
     cursor: var(--onScreenPress);
     transition: 1s;
@@ -50,7 +45,7 @@
     background-color: #ffff;
     padding: .5em;
     transform: translateX(-250px);
-    transition: 1s
+    transition: 1s;
 }
 
 .left:hover .options {
@@ -58,24 +53,21 @@
     box-shadow: 0, 0, 0, rgba(0, 0, 0, 0.5);
 }
 
-.navigateOptions > div {
+.navigateOptions > a {
     display: flex;
     align-items: center;
     padding: .5em .5em;
 }
 
-.navigateOptions > div:hover {
+.navigateOptions > a:hover {
     background-color: #c8cfd4;
 }
 
-.navigateOptions > div > a {
-    margin-left: .5em;
-}
 
 .buttonContainer {
     display: flex;
     align-items: center;
-    padding: .5em .5em;
+    padding: .5em .4em;
 }
 
 .buttonContainer > a {
@@ -85,9 +77,10 @@
 
 .optionIcon {
     font-size: 2em;
+    margin-right: .3em;
 }
 
-.navigateOptions > div:hover > .optionIcon {
+.navigateOptions > a:hover > .optionIcon {
     color: #cf1020;
 }
 
@@ -101,7 +94,7 @@
     backdrop-filter: blur(2px);
     visibility: hidden;
     opacity: 0;
-    transition: 250ms
+    transition: 250ms;
 }
 
 .left:hover .overlay {

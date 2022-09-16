@@ -12,8 +12,9 @@
 
 .number_heading {
 	display: flex;
-	font-size: clamp(1rem, 3.6vw, 4rem); 
+	font-size: clamp(1.7rem, 4.1vw, 5rem); 
     color: var(--white);
+    margin-bottom: 1em;
 }
 
 .number_heading::before {
@@ -25,9 +26,10 @@
 .decoration_line {
 	display: flex;
     height: 1px;
-    width: 71.2%;
+    width: 53%;
     margin-left: 1em;
     background-color: var(--white);
+    margin-bottom: 1.5em;
 }
 
 .description_container {

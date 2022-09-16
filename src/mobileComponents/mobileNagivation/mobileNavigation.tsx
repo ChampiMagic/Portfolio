@@ -1,8 +1,7 @@
 import style from './mobileNavigation.module.css'
 import { Link } from 'react-scroll';
-import { FaConnectdevelop, FaPhoenixFramework } from 'react-icons/fa'
+import { FaConnectdevelop, FaPhoenixFramework, FaCommentDots } from 'react-icons/fa'
 import { MdWork } from 'react-icons/md'
-import { GrContact } from 'react-icons/gr'
 import { AiFillExclamationCircle } from 'react-icons/ai'
 import { ImProfile } from 'react-icons/im'
 import { useRef, useState, useEffect} from 'react';
@@ -51,7 +50,7 @@ export default function MobileNavigation(): JSX.Element {
     
 
     return (
-        <nav ref={nav} className={`${style.nav} ${isDown ? style.navHidden : null}`}>
+        <nav ref={nav} className={style.nav}>
 
             <button onClick={onDisplay} className={style.left}>
                <FaConnectdevelop className={style.icon}/>
@@ -59,22 +58,27 @@ export default function MobileNavigation(): JSX.Element {
 
             <div ref={options} className={style.options}>
                 <div className={style.navigateOptions}>
-                        <div className={style.option_1}>
+                        
+                         
+                        <Link to="about" spy={true} smooth={true} duration={500} >
                           <AiFillExclamationCircle className={style.optionIcon}/>
-                          <Link to="about" spy={true} smooth={true} duration={500} >About</Link>
-                        </div>
-                        <div className={style.option_2}>
-                          <FaPhoenixFramework className={style.optionIcon} />
-                          <Link to="experience" spy={true} smooth={true} duration={500} >Experience</Link>
-                        </div>
-                        <div className={style.option_3}>
-                          <MdWork className={style.optionIcon} />
-                          <Link to="projects" spy={true} smooth={true} duration={500} >Projects</Link>
-                        </div>
-                        <div className={style.option_4}>
-                          <GrContact className={style.optionIcon} />
-                          <Link to="contact" spy={true} smooth={true} duration={500} >Contact</Link>
-                        </div>
+                          About
+                        </Link>
+                        
+                        <Link to="experience" spy={true} smooth={true} duration={500} >
+                          <FaPhoenixFramework className={style.optionIcon}/>
+                          Experience
+                        </Link>
+
+                        <Link to="projects" spy={true} smooth={true} duration={500} >
+                          <MdWork className={style.optionIcon}/>
+                          Projects
+                        </Link>
+
+                        <Link to="contact" spy={true} smooth={true} duration={500} >
+                          <FaCommentDots className={style.optionIcon}/>
+                          Contact
+                        </Link>
                 </div>
 
                 <div className={style.buttonContainer}>

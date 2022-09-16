@@ -10,6 +10,10 @@ export default function MobileArticle(): JSX.Element {
           
             <MobilePresentation />
             <MobileAbout />
+            <MobileAbout />
+            <MobileAbout />
+            <MobileAbout />
+            <MobileAbout />
         </div>
        
     )
