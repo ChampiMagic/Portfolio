@@ -8,23 +8,6 @@ import { useRef, useState, useEffect} from 'react';
 
 export default function MobileNavigation(): JSX.Element {
 
-    const [isDown, setIsDown] = useState<boolean>(false)
-
-    const nav = useRef<HTMLHeadingElement>(null);
-
-    let lastScrollY = window.scrollY;
-    
-    window.addEventListener("scroll", () => {
-        if(lastScrollY <= window.scrollY && lastScrollY !== 0) {
-            setIsDown(true)
-        } else {
-            setIsDown(false)
-        }
-           
-        lastScrollY = window.scrollY;
-    });
-
-
     const options = useRef<HTMLDivElement>(null);
     const overlay = useRef<HTMLDivElement>(null);
 
@@ -50,7 +33,7 @@ export default function MobileNavigation(): JSX.Element {
     
 
     return (
-        <nav ref={nav} className={style.nav}>
+        <nav className={style.nav}>
 
             <button onClick={onDisplay} className={style.left}>
                <FaConnectdevelop className={style.icon}/>
@@ -60,22 +43,22 @@ export default function MobileNavigation(): JSX.Element {
                 <div className={style.navigateOptions}>
                         
                          
-                        <Link to="about" spy={true} smooth={true} duration={500} >
+                        <Link to="about" spy={true} smooth={true} duration={500} offset={-80}>
                           <AiFillExclamationCircle className={style.optionIcon}/>
                           About
                         </Link>
                         
-                        <Link to="experience" spy={true} smooth={true} duration={500} >
+                        <Link to="experience" spy={true} smooth={true} duration={500} offset={-80}>
                           <FaPhoenixFramework className={style.optionIcon}/>
                           Experience
                         </Link>
 
-                        <Link to="projects" spy={true} smooth={true} duration={500} >
+                        <Link to="projects" spy={true} smooth={true} duration={500} offset={-80}>
                           <MdWork className={style.optionIcon}/>
                           Projects
                         </Link>
 
-                        <Link to="contact" spy={true} smooth={true} duration={500} >
+                        <Link to="contact" spy={true} smooth={true} duration={500} offset={-80}>
                           <FaCommentDots className={style.optionIcon}/>
                           Contact
                         </Link>
