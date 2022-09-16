@@ -69,12 +69,11 @@ export default function App(): JSX.Element {
   } 
   else {
     return (
-      <div className={style.body}>
-         
-         <StaticBackgroundParticles />
+      <div className={`${style.body} ${style.mobile}`}>
          
          <MobileNavigation />
          <MobileArticle />
+
       </div>
       
      )
