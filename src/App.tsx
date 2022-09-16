@@ -7,6 +7,7 @@ import AsideRight from './components/asides/asideRight/asideRight'
 
 //mobile
 import MobileNavigation from './mobileComponents/mobileNagivation/mobileNavigation'
+import MobileArticle from './mobileComponents/mobileArticle/mobileArticle'
 
 import StaticBackgroundParticles from './components/particles/StaticParticles'
 import AnimatedBackgroundParticles from './components/particles/AnimatedParticle'
@@ -73,7 +74,7 @@ export default function App(): JSX.Element {
          <StaticBackgroundParticles />
          
          <MobileNavigation />
-         
+         <MobileArticle />
       </div>
       
      )
