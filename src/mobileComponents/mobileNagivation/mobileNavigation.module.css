@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+    width: 100%;
+    height: 7em;
+    background-color: #00000038;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 550ms;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    padding-left: 2em;
+    z-index: 10;
+}
+
+.navHidden {
+    transform: translateY(-10em);
+}
+
+.left {
+    margin:0;
+    background: none;
+    border: none
+}
+
+.icon {
+    font-size: clamp(3em, 7vw, 6em); 
+    color: #83bde4;
+    cursor: var(--onScreenPress);
+    transition: 1s;
+}
+
+.left:hover .icon {
+    color: #cf1020;
+    transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(180deg) rotateY(180deg) rotateZ(180deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+}
+
+.options {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    height: 100vh;
+    width: 60%;
+    background-color: #ffff;
+    padding: .5em;
+    transform: translateX(-250px);
+    transition: 1s
+}
+
+.left:hover .options {
+    transform: translateX(0);
+    box-shadow: 0, 0, 0, rgba(0, 0, 0, 0.5);
+}
+
+.navigateOptions > div {
+    display: flex;
+    align-items: center;
+    padding: .5em .5em;
+}
+
+.navigateOptions > div:hover {
+    background-color: #c8cfd4;
+}
+
+.navigateOptions > div > a {
+    margin-left: .5em;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    padding: .5em .5em;
+}
+
+.buttonContainer > a {
+    text-decoration: none;
+    margin-left: .5em;
+}
+
+.optionIcon {
+    font-size: 2em;
+}
+
+.navigateOptions > div:hover > .optionIcon {
+    color: #cf1020;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 250ms
+}
+
+.left:hover .overlay {
+    visibility: visible;
+    opacity: 1;
+}
